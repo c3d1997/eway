@@ -1,0 +1,556 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+p {
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+
+/* 414 */
+
+
+/*首頁介紹 */
+
+.container {
+    width: 100%;
+    padding: 0 24px;
+}
+
+.eway_btn {
+    margin: -20px -20px;
+}
+
+.eway_btn_2 {
+    margin: -20px -20px;
+    margin-bottom: 50px;
+}
+
+.introduce {
+    margin: auto;
+    width: 100%;
+    padding-bottom: 44px;
+    background: #204379 url(/imgs/wocean.png) center 65%;
+}
+
+.introduce_title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    line-height: 40px;
+    font-weight: 700;
+    padding-top: 60px;
+}
+
+.introduce_title h1 {
+    letter-spacing: 6.4px;
+    margin-right: -6.4px;
+}
+
+.introduce_title h2 {
+    letter-spacing: 5.6px;
+    margin-right: -5.6px;
+}
+
+.introduce_from {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.introduce_content {
+    margin-bottom: 24px;
+}
+
+.introduce_content_box {
+    margin: auto;
+    max-width: 808px;
+    position: relative;
+    background: #DAE4F1;
+    border: 2px solid #B57556;
+    padding: 24px 16px 0 16px;
+    margin-top: 32px;
+    border-radius: 20px;
+}
+
+.introduce_content li {
+    list-style-position: outside;
+    list-style-type: decimal;
+    margin-left: 20px;
+    font-weight: 400;
+    line-height: 29px;
+    color: #204379;
+}
+
+.introduce_content_txt li:nth-child(1) span {
+    font-weight: 700;
+    color: #204379;
+    text-decoration: underline;
+}
+
+.introduce_content_txt li:nth-child(4) span {
+    font-weight: 700;
+    color: #204379;
+}
+
+.introduce_content_title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    color: #204379;
+    font-weight: 700;
+    line-height: 22px;
+}
+
+.pos_a {
+    position: absolute;
+}
+
+.boat_top {
+    top: -25px;
+    right: -12px;
+}
+
+.boat_use_top {
+    top: -16px;
+    right: -16px;
+}
+
+.boat_pop {
+    top: -55px;
+    right: 15px;
+}
+
+.boat_down {
+    bottom: -50px;
+    left: 10px;
+}
+
+.boat_down_fire {
+    bottom: -50px;
+    left: -20px;
+}
+
+
+/* 海浪 */
+
+
+/* .ocean_wave img {
+    width: 200%;
+    height: 100%;
+} */
+
+.ocean_wave_train {
+    width: 100%;
+    height: 109px;
+    overflow: hidden;
+}
+
+.ocean_wave {
+    width: 200%;
+    height: 109px;
+    background: url(/imgs/oce.svg);
+}
+
+
+/* 輸入框 */
+
+.all_color {
+    background-color: #E2D9D3;
+}
+
+.input_froms {
+    padding-top: 33.5px;
+}
+
+.form {
+    position: relative;
+    padding: 10px 20px;
+    border: 2px solid #B57556;
+    box-shadow: 0px 1px 10px rgba(73, 72, 72, 0.25);
+    border-radius: 50px;
+    width: 123px;
+    height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #B57556;
+    letter-spacing: 9.2px;
+    font-weight: 700;
+    font-size: 18px;
+    background: white;
+    margin-left: 50%;
+    transform: translateX(-50%)translateY(50%);
+}
+
+.form img {
+    position: absolute;
+    right: -35%;
+}
+
+.form p {
+    margin-right: -9.2px;
+}
+
+.input_froms_box {
+    max-width: 720px;
+    margin: auto;
+    background-color: white;
+    border: 2px solid #B57556;
+    box-shadow: 0px 1px 20px rgba(73, 72, 72, 0.25);
+    border-radius: 16px;
+    padding: 40px 20px;
+}
+
+.input_froms_box label {
+    color: #204379;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+}
+
+.input_froms_box div {
+    margin-bottom: 20px;
+}
+
+.input_froms_box div:last-child {
+    margin-bottom: 0px;
+}
+
+.input_froms_box div span {
+    color: #B57556;
+}
+
+.input_froms_box input {
+    padding: 8px 16px;
+    border: 1px solid #204379;
+    border-radius: 20px;
+    width: 100%;
+    height: 57px;
+    margin-top: 4px;
+}
+
+.input_froms_box select {
+    padding: 8px 12px;
+    border: 1px solid #204379;
+    border-radius: 20px;
+    width: 100%;
+    height: 57px;
+    margin-top: 4px;
+}
+
+.input_froms_box option {}
+
+
+/* 參考至 https://code-examples.net/zh-TW/q/13f7b03 */
+
+input::-webkit-calendar-picker-indicator {
+    opacity: 0;
+}
+
+
+/* https://blog.csdn.net/weixin_38643688/article/details/79565885 */
+
+select {
+    -webkit-appearance: none;
+}
+
+.arrow {
+    position: relative;
+}
+
+.arrow_img {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background: url(/imgs/🎨Color.png) no-repeat center;
+    top: 50%;
+    transform: translateY(-40%);
+    right: 16.5px;
+}
+
+
+/* 沙子ICON */
+
+.icon {
+    width: 100%;
+    background: url(/imgs/沙子.png) center/contain;
+    padding: 40px 0;
+}
+
+.icon_content_box {
+    max-width: 422px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 8px 0px 8px;
+    flex-wrap: wrap;
+}
+
+.icon_content {
+    background: white;
+    width: 100%;
+    max-width: 178px;
+    height: 112px;
+    box-shadow: 0px 8px 0px #EDEEF0;
+    border-radius: 20px;
+    margin: 20.5px 8px;
+    position: relative;
+}
+
+.icon_icon {
+    justify-content: center;
+    position: absolute;
+    top: -23%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.icon_abc {
+    position: absolute;
+    color: white;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.icon_abc p {
+    font-size: 17px;
+}
+
+.icon_number {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.icon_number p {
+    border-radius: 50px;
+    padding: 3px 10px;
+    font-size: 12px;
+    line-height: 17px;
+    margin-right: 8px;
+}
+
+.icon_content:nth-child(1) .icon_number p,
+.icon_content:nth-child(2) .icon_number p,
+.icon_content:nth-child(3) .icon_number p {
+    border: 1px solid #B3B960;
+    color: #B3B960;
+}
+
+.icon_content:nth-child(4) .icon_number p,
+.icon_content:nth-child(5) .icon_number p,
+.icon_content:nth-child(6) .icon_number p,
+.icon_content:nth-child(7) .icon_number p,
+.icon_content:nth-child(8) .icon_number p {
+    border: 1px solid #A0BCC8;
+    color: #A0BCC8;
+}
+
+.icon_txt {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon_txt p {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.icon_content:nth-child(1) .icon_txt p,
+.icon_content:nth-child(2) .icon_txt p,
+.icon_content:nth-child(3) .icon_txt p {
+    color: #B3B960;
+    padding-bottom: 10px;
+}
+
+.icon_content:nth-child(4) .icon_txt p,
+.icon_content:nth-child(5) .icon_txt p,
+.icon_content:nth-child(6) .icon_txt p,
+.icon_content:nth-child(7) .icon_txt p,
+.icon_content:nth-child(8) .icon_txt p {
+    color: #A0BCC8;
+    padding-bottom: 28px;
+}
+
+
+/* 燈塔 */
+
+.lighthouse {
+    margin: auto;
+    max-width: 412px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 70px;
+}
+
+.lighthouse_content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.lighthouse_content_num p {
+    color: #B57556;
+}
+
+.lighthouse_content_txt p {
+    color: #204379;
+}
+
+.lighthouse_content p {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+    text-align: center;
+}
+
+.line_left,
+.line_right {
+    position: relative;
+    width: 75px;
+    height: 75px;
+}
+
+.line_left::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 75px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #204379;
+    transform-origin: bottom top;
+    transform: rotate(75deg);
+}
+
+.out_line_left {
+    position: absolute;
+    top: -5px;
+    left: 10px;
+}
+
+.line_right::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 75px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #204379;
+    transform-origin: bottom top;
+    transform: rotate(-75deg);
+}
+
+.out_line_right {
+    position: absolute;
+    top: -5px;
+    right: 10px;
+}
+
+
+/* 店鋪 */
+
+.storefront {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 19px;
+    border-radius: 50px 50px 0px 0px;
+    background: #204379;
+}
+
+.storefront_title p {
+    max-width: 301px;
+    font-weight: 700;
+    font-style: 20px;
+    line-height: 40px;
+    text-align: center;
+    letter-spacing: 4px;
+    margin: 0 36.5px;
+    color: white;
+}
+
+.storefront_img {
+    margin-top: 24px;
+}
+
+@media only screen and (min-width: 769px) {
+    .introduce {
+        padding-bottom: 40px;
+        background: #204379 url(/imgs/woceanL.png) no-repeat center 100%
+    }
+    .boat_top {
+        top: -25px;
+        right: 20px;
+    }
+    .boat_use_top {
+        top: -16px;
+        right: 18px;
+    }
+    .boat_pop {
+        top: -55px;
+        right: 40px;
+    }
+    .boat_down {
+        bottom: -55px;
+        left: 40px;
+    }
+    .boat_down_fire {
+        bottom: -55px;
+        left: 10px;
+    }
+    .form {
+        margin-left: 50%;
+    }
+    .icon_content {
+        margin: 20.5px 16px;
+    }
+    .icon_content_box {
+        max-width: 646px;
+        justify-content: flex-start;
+    }
+}
+
+@media only screen and (min-width: 1401px) {
+    .introduce {
+        padding-bottom: 52px;
+        background: #204379 url(/imgs/woceanL.png) no-repeat center 100% /100% 91%
+    }
+    .form {
+        margin-left: 50%;
+    }
+}
