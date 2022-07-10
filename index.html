@@ -96,10 +96,12 @@
 
 
                     <div class="store">
-                        <label for="store">store <span>*</span></label>
+                        <label for="store">store<span class="show"></span></label>
                         <div class="arrow">
-                            <input type="text" id="store" list="store_list" placeholder="placeholder text">
+                            <input class="c_op" type="text" id="store_id" list="store_list" placeholder="placeholder text" onkeyup="value=value.replace(/[^store1$^store2$^store3$]/g,'')">
+                            <!-- /store1|store2|store3*/ -->
                             <div class="arrow_img"></div>
+                            <div class="errow errow_all"></div>
                         </div>
                         <datalist id="store_list">
                         <option value="store1"></option>
@@ -109,25 +111,29 @@
                     </div>
 
                     <div class="name">
-                        <label for="name">name <span>*</span></label>
-                        <input type="text" id="name" placeholder="placeholder text">
+                        <label for="name">name<span class="show2"></span> </label>
+
+                        <input class="c_op" type="text" id="name_id" placeholder="placeholder text" onkeyup="value=value.replace(/[^\a-\z\A-\Z\u4E00-\u9FA5]/g,'')">
+                        <div class="errow2 errow_all"></div>
                     </div>
 
+
                     <div class="phone">
-                        <label for="phone">phone <span>*</span></label>
-                        <input type="tel" id="phone" placeholder="placeholder text">
+                        <label for="phone">phone <span class="show3"></span></label>
+                        <input class="c_op" type="tel" id="phone_id" placeholder="placeholder text" onkeyup="value=value.replace(/[^\d{0,9}]/g,'')">
+                        <div class="errow3 errow_all"></div>
                     </div>
 
                     <div class="amount">
-                        <label for="amount">Amount of consumption <span>*</span></label>
-                        <input type="text" id="amount" placeholder="placeholder text">
+                        <label for="amount">Amount of consumption </label>
+                        <input class="c_op" type="text" id="amount" placeholder="placeholder text">
                     </div>
 
                     <div class="payment">
-                        <label for="payment">payment <span>*</span></label>
+                        <label for="payment">payment </label>
                         <div class="arrow">
-                            <select name="payment" id="payment">
-                            <option value="digital payment">digital payment</option>
+                            <select class="c_op" name="payment" id="payment">
+                            <option  value="digital payment">digital payment</option>
                             <option value="ATM">ATM</option>
                         </select>
                             <div class="arrow_img"></div>
@@ -144,7 +150,7 @@
             </div>
         </div>
         <div class="introduce_from">
-            <div class="eway_btn_2">
+            <div id="my_Click" class="eway_btn_2" onclick="one(),two(),three()">
                 <img src="./imgs/submit.png" alt="">
             </div>
         </div>
