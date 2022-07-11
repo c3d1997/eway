@@ -20,8 +20,8 @@
                 <h2>who loves pain</h2>
             </div>
             <div class="introduce_from">
-                <div class="eway_btn">
-                    <img src="./imgs/form.png" alt="">
+                <div class="eway_btn" id="scroll_btn" onclick="scrolltoF()">
+                    <p>FROM</p>
                 </div>
 
             </div>
@@ -88,9 +88,9 @@
     </div>
     <div class="all_color">
         <div class="input_froms">
-            <div class="container">
+            <div class="container" id="input_froms_scroll">
                 <div class="form">
-                    <p>FORM</p><img src="./imgs/turtle.png" alt="">
+                    <p>FORM</p><img class="turtle" src="./imgs/turtle.png" alt="">
                 </div>
                 <div class="input_froms_box">
 
@@ -98,8 +98,9 @@
                     <div class="store">
                         <label for="store">store<span class="show"></span></label>
                         <div class="arrow">
-                            <input class="c_op" type="text" id="store_id" list="store_list" placeholder="placeholder text" onkeyup="value=value.replace(/[^store1$^store2$^store3$]/g,'')">
-                            <!-- /store1|store2|store3*/ -->
+                            <input class="c_op" type="text" id="store_id" list="store_list" placeholder="placeholder text" value="" onblur="storeNull()" oninput="oneCheck()">
+
+                            <!-- /^s|1|2|3s|t|o|r|e|1|2|3$/g -->
                             <div class="arrow_img"></div>
                             <div class="errow errow_all"></div>
                         </div>
@@ -113,29 +114,37 @@
                     <div class="name">
                         <label for="name">name<span class="show2"></span> </label>
 
-                        <input class="c_op" type="text" id="name_id" placeholder="placeholder text" onkeyup="value=value.replace(/[^\a-\z\A-\Z\u4E00-\u9FA5]/g,'')">
+                        <input class="c_op" type="text" id="name_id" placeholder="placeholder text" onblur="nameNull()" oninput="twoCheck()">
                         <div class="errow2 errow_all"></div>
+                        <!--  -->
+                        <!-- onkeyup="value=value.replace(/[^\a-\z\A-\Z\u4E00-\u9FA5]/g,'')" -->
                     </div>
 
 
                     <div class="phone">
                         <label for="phone">phone <span class="show3"></span></label>
-                        <input class="c_op" type="tel" id="phone_id" placeholder="placeholder text" onkeyup="value=value.replace(/[^\d{0,9}]/g,'')">
+                        <input class="c_op" type="tel" id="phone_id" placeholder="placeholder text" onblur="phoneNull() " oninput="threeCheck()">
                         <div class="errow3 errow_all"></div>
+
                     </div>
+                    <!-- /^09*\d{9}/gi; -->
 
                     <div class="amount">
-                        <label for="amount">Amount of consumption </label>
-                        <input class="c_op" type="text" id="amount" placeholder="placeholder text">
+                        <label for="amount">Amount of consumption <span class="show4"></span></label>
+                        <input class="c_op" type="text" id="amount_id" placeholder="placeholder text" onblur="amountNull()" onkeyup="fourCheck()">
+                        <div class="errow4 errow_all"></div>
+                        <!-- /\d/gi; -->
                     </div>
 
                     <div class="payment">
-                        <label for="payment">payment </label>
+                        <label for="payment">payment <span class="show5"></span></label>
                         <div class="arrow">
-                            <select class="c_op" name="payment" id="payment">
+                            <select class="c_op" name="payment" id="payment_id" onblur="paymentNull()">
                             <option  value="digital payment">digital payment</option>
                             <option value="ATM">ATM</option>
+                            
                         </select>
+                            <div class="errow5 errow_all"></div>
                             <div class="arrow_img"></div>
                         </div>
                         <!-- <input type="text" id="payment" list="payment_list" placeholder="placeholder text">
@@ -150,8 +159,13 @@
             </div>
         </div>
         <div class="introduce_from">
-            <div id="my_Click" class="eway_btn_2" onclick="one(),two(),three()">
-                <img src="./imgs/submit.png" alt="">
+            <div id="my_Click" class="eway_btn_2" onclick="oneCheck(),storeNull(),twoCheck(), nameNull(),threeCheck(),phoneNull(),fourCheck(),amountNull(),paymentNull(),btnClick()">
+                <!-- <img src="./imgs/submit.png" alt=""> -->
+                <div class="submit_ALL"></div>
+                <div class="submit_notE">
+
+                </div>
+
             </div>
         </div>
 

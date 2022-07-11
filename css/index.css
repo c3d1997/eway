@@ -30,12 +30,46 @@ h3 {
 }
 
 .eway_btn {
-    margin: -20px -20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 57px;
+    padding: 16px 20px;
+    border-radius: 50px;
+    background: #B57556;
+    transition: .5s;
+    cursor: pointer;
+    animation-name: btncolor;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes btncolor {
+    0% {
+        box-shadow: 0px 0px 20px rgba(0, 110, 255, 0.91);
+    }
+    50% {
+        box-shadow: 0px 0px 20px rgba(0, 255, 0, 0.91);
+    }
+    100% {
+        box-shadow: 0px 0px 20px rgba(0, 110, 255, 0.91);
+    }
+}
+
+.eway_btn p {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 8px;
+    margin-right: -8px;
+    color: white;
 }
 
 .eway_btn_2 {
     margin: -20px -20px;
-    margin-bottom: 50px;
+    margin-bottom: 29px;
+    cursor: pointer;
 }
 
 .introduce {
@@ -69,7 +103,16 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 40px;
+    margin-top: 32px;
+    transition: .25s;
+}
+
+.eway_btn:hover {
+    transform: scale(103%);
+}
+
+.eway_btn:active {
+    transform: scale(98%);
 }
 
 .introduce_content {
@@ -129,11 +172,54 @@ h3 {
 .boat_use_top {
     top: -16px;
     right: -16px;
+    animation-name: boatSC;
+    animation-duration: 7.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes boatSC {
+    0% {
+        transform: rotate(0);
+    }
+    10% {
+        transform: rotate(-12deg)translateX(15%);
+    }
+    50% {
+        transform: rotate(-140deg)translateX(40%);
+    }
+    60% {
+        transform: rotate(-128deg)translateX(40%);
+    }
 }
 
 .boat_pop {
     top: -55px;
     right: 15px;
+    animation-name: boatPOP;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear
+}
+
+@keyframes boatPOP {
+    0% {
+        transform: rotate(-60deg) translateX(-30px)scale(100%);
+    }
+    25% {
+        transform: rotate(-70deg) translateX(0px)scale(80%);
+    }
+    50% {
+        transform: rotate(-60deg)translateX(30px)scale(60%);
+        opacity: 1;
+    }
+    75% {
+        transform: rotate(-70deg)translateX(60px)scale(40%);
+        opacity: 0;
+    }
+    100% {
+        transform: rotate(0deg) translateX(-30px)scale(0%);
+        opacity: 0;
+    }
 }
 
 .boat_down {
@@ -142,8 +228,31 @@ h3 {
 }
 
 .boat_down_fire {
+    z-index: 3;
     bottom: -50px;
     left: -20px;
+    animation-name: boatF;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear
+}
+
+@keyframes boatF {
+    0% {
+        transform: scale(0%);
+        opacity: 0;
+    }
+    33% {
+        transform: scale(50%);
+        opacity: 1;
+    }
+    66% {
+        transform: scale(150%);
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 
@@ -162,9 +271,56 @@ h3 {
 }
 
 .ocean_wave {
-    width: 200%;
+    width: 199%;
     height: 109px;
-    background: url(/imgs/oce.svg);
+    background: url(/imgs/oce.svg) center;
+    animation-name: train;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear
+}
+
+@keyframes train {
+    0% {
+        transform: translateX(0%);
+    }
+    25% {
+        transform: translateX(-12.5%);
+    }
+    50% {
+        transform: translateX(-25%);
+    }
+    75% {
+        transform: translateX(-37.5%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.turtle {
+    animation-name: tt;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear
+}
+
+@keyframes tt {
+    0% {
+        transform: translateX(0%)translatey(0%) rotate(0);
+    }
+    25% {
+        transform: translateX(-25%)translatey(-25%)rotate(-30deg);
+    }
+    50% {
+        transform: translateX(-50%)translatey(-50%)rotate(-40deg);
+    }
+    75% {
+        transform: translateX(-25%)translatey(-25%)rotate(-30deg);
+    }
+    100% {
+        transform: translateX(-0%)translatey(0%)rotate(0deg);
+    }
 }
 
 
@@ -179,9 +335,12 @@ h3 {
 }
 
 .errow_all {
+    height: 20px;
+}
+
+.errow_all p {
     font-size: 12px;
     color: #E06D6D;
-    height: 20px;
 }
 
 .form {
@@ -202,6 +361,21 @@ h3 {
     background: white;
     margin-left: 50%;
     transform: translateX(-50%)translateY(50%);
+}
+
+.submit_notE {
+    height: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -12px;
+}
+
+.submit_notE p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #E06D6D;
 }
 
 .form img {
@@ -288,15 +462,35 @@ select {
     -webkit-appearance: none;
 }
 
+.arrow {
+    position: relative;
+}
+
 .arrow_img {
     position: absolute;
     width: 24px;
     height: 24px;
     background: url(/imgs/🎨Color.png) no-repeat center;
     top: 50%;
-    transform: translateY(-40%);
+    transform: translateY(-80%);
     right: 16.5px;
     pointer-events: none;
+}
+
+.submit_ALL {
+    background: url(/imgs/submit.png) no-repeat center;
+    width: 240px;
+    height: 97px;
+    transition: .25s;
+}
+
+.submit_ALL:hover {
+    transform: scale(102.5%);
+}
+
+.submit_ALL:active {
+    transform: scale(95%);
+    opacity: .5;
 }
 
 
